@@ -19,6 +19,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Для парсинга необходим Google Chrome. [Узнайте](chrome://settings/help) свою версию, а затем [скачайте](https://chromedriver.chromium.org/downloads) нужный chromedriver. Его необходимо поместить в корневую директорию проекта.
+
 ## Парсинг:
 ```bash
 scrapy crawl goods -t json --nolog -o - > results.json
