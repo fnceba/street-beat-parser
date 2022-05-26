@@ -1,4 +1,12 @@
-## Первый запуск:
+# Как запустить
+
+
+## Установка:
+
+``` bash
+git clone https://github.com/fnceba/street-beat-parser
+cd street-beat-parser
+```
 
 Создать виртуальную среду:
 ``` bash
