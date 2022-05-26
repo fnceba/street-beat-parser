@@ -11,7 +11,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Парсинг
+## Парсинг:
 ```bash
 scrapy crawl goods -t json --nolog -o - > results.json
 ```
