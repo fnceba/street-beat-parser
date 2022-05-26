@@ -88,3 +88,13 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+import datetime
+FEED_URI = 'results_' + datetime.datetime.today().strftime('%y%m%d') + '.json'
+FEED_FORMAT = 'json'
+FEED_EXPORTERS = {'json': 'scrapy.exporters.JsonItemExporter'}
+FEED_EXPORT_ENCODING = 'utf-8'
+ROBOTSTXT_OBEY = False
+METAREFRESH_ENABLED = False
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware': None,
+}
