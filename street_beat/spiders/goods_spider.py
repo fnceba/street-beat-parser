@@ -28,7 +28,7 @@ class ProductSpider(scrapy.Spider):
 
     def parse(self, response):
         json_dict = self.get_json(response)
-        for i in range(1,json_dict['catalog']['pagination']['lastPage']):
+        for i in range(1,json_dict['catalog']['pagination']['lastPage']+1):
             yield scrapy.Request('https://street-beat.ru/cat/?page='+str(i), callback=self.parse_goods)
 
     def parse_goods(self, response):
