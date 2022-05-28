@@ -12,9 +12,7 @@ import io
 class ProductSpider(scrapy.Spider):
     name = "goods"
     #allowed_domains = ['street-beat.ru']
-    start_urls = [ ]
-    for i in range(1,10):
-        start_urls.append('https://street-beat.ru/cat/?page='+str(i))
+    start_urls = ['https://street-beat.ru/cat']
     def __init__(self):
         options = webdriver.ChromeOptions()
         options.add_argument("start-maximized")
